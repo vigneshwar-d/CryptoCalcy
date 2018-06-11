@@ -67,9 +67,12 @@
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" keyboardAppearance="alert" returnKeyType="done"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad" keyboardAppearance="alert" returnKeyType="go"/>
+                                        <connections>
+                                            <action selector="textFieldAction:" destination="BYZ-38-t0r" eventType="editingChanged" id="tik-46-7p4"/>
+                                        </connections>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AMERICAN DOLLARS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-CT-78e">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="US DOLLARS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBa-CT-78e">
                                         <rect key="frame" x="90" y="10" width="267" height="23.5"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
                                         <color key="textColor" red="0.0" green="0.87928299489999995" blue="0.02678071165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -105,16 +108,30 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRt-hZ-Now">
+                                <rect key="frame" x="329" y="162" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="1Pl-0c-YUF"/>
+                                    <constraint firstAttribute="height" constant="30" id="GtF-Jx-r6P"/>
+                                </constraints>
+                                <state key="normal" title="🔄"/>
+                                <connections>
+                                    <action selector="refreshButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BOv-al-g5x"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="ZRt-hZ-Now" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="12" id="6RS-VM-khG"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="702-eH-hWi"/>
                             <constraint firstItem="C1q-e1-pQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DnV-me-Sjc"/>
                             <constraint firstItem="X2t-sv-X8q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I4D-5G-Zp8"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="top" secondItem="X2t-sv-X8q" secondAttribute="bottom" id="P9d-2R-MvN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZRt-hZ-Now" secondAttribute="trailing" constant="16" id="Xmz-eu-T8r"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C1q-e1-pQX" secondAttribute="bottom" id="YOh-bj-jAD"/>
                             <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="50" id="aJm-mM-Ygo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C1q-e1-pQX" secondAttribute="trailing" id="pif-pH-HmZ"/>
+                            <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="ZRt-hZ-Now" secondAttribute="bottom" constant="8" id="qNM-ZU-LQd"/>
                             <constraint firstItem="X2t-sv-X8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r51-cK-XBw"/>
                             <constraint firstItem="X2t-sv-X8q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t7o-Nh-KIm"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uHH-qL-RJ4"/>
@@ -122,7 +139,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="currencyTextField" destination="K23-Dh-HqL" id="C3N-Tf-7pv"/>
+                        <outlet property="currencyText" destination="K23-Dh-HqL" id="CzO-7m-Jss"/>
                         <outlet property="currrencyIcon" destination="gK5-7e-laD" id="Bq1-Y5-2hC"/>
                         <outlet property="tableView" destination="C1q-e1-pQX" id="RVO-NW-mYW"/>
                         <segue destination="4GS-5C-qQx" kind="show" identifier="selectCoins" id="DCQ-F4-KMy"/>
@@ -173,7 +190,7 @@
                                 <rect key="frame" x="0.0" y="90" width="375" height="577"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="r8G-vH-8zQ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="r8G-vH-8zQ">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r8G-vH-8zQ" id="Chf-hM-0n6">

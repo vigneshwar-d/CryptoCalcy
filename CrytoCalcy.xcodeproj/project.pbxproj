@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3415C4E8A822B2AF505DE729 /* Pods_CrytoCalcy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */; };
 		B9C170C120CD00CD008A3828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C020CD00CD008A3828 /* AppDelegate.swift */; };
 		B9C170C320CD00CD008A3828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C220CD00CD008A3828 /* ViewController.swift */; };
 		B9C170C620CD00CD008A3828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C170C420CD00CD008A3828 /* Main.storyboard */; };
@@ -21,6 +22,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrytoCalcy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrytoCalcy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy.debug.xcconfig"; sourceTree = "<group>"; };
 		B9C170BD20CD00CD008A3828 /* CrytoCalcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrytoCalcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C170C020CD00CD008A3828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C170C220CD00CD008A3828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		B9C170DD20CD1702008A3828 /* CoinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewController.swift; sourceTree = "<group>"; };
 		B9C170DF20CD7602008A3828 /* WatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchList.swift; sourceTree = "<group>"; };
 		B9C170E020CD7602008A3828 /* WatchList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchList.xib; sourceTree = "<group>"; };
+		F4B216210C0E912736C5E1B7 /* Pods-CrytoCalcy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrytoCalcy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,17 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3415C4E8A822B2AF505DE729 /* Pods_CrytoCalcy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F2FC566AF0D9F01F5E5D343 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B9C170B420CD00CD008A3828 = {
 			isa = PBXGroup;
 			children = (
 				B9C170BF20CD00CD008A3828 /* CrytoCalcy */,
 				B9C170BE20CD00CD008A3828 /* Products */,
+				CDA85383DBBAA47926D352F3 /* Pods */,
+				4F2FC566AF0D9F01F5E5D343 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,6 +97,15 @@
 			path = CrytoCalcy;
 			sourceTree = "<group>";
 		};
+		CDA85383DBBAA47926D352F3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */,
+				F4B216210C0E912736C5E1B7 /* Pods-CrytoCalcy.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -89,9 +113,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B9C170D220CD00CF008A3828 /* Build configuration list for PBXNativeTarget "CrytoCalcy" */;
 			buildPhases = (
+				1D87729AD16F2179DB0F8F4D /* [CP] Check Pods Manifest.lock */,
 				B9C170B920CD00CD008A3828 /* Sources */,
 				B9C170BA20CD00CD008A3828 /* Frameworks */,
 				B9C170BB20CD00CD008A3828 /* Resources */,
+				AA7A64D7EA17481CCD05AE52 /* [CP] Embed Pods Frameworks */,
+				BCCFB2D740A90B3EE6AE2D88 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +176,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1D87729AD16F2179DB0F8F4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CrytoCalcy-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA7A64D7EA17481CCD05AE52 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BCCFB2D740A90B3EE6AE2D88 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9C170B920CD00CD008A3828 /* Sources */ = {
@@ -302,15 +385,13 @@
 		};
 		B9C170D320CD00CF008A3828 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CrytoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -320,15 +401,13 @@
 		};
 		B9C170D420CD00CF008A3828 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F4B216210C0E912736C5E1B7 /* Pods-CrytoCalcy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CrytoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

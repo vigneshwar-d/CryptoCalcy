@@ -8,23 +8,30 @@
 
 import UIKit
 import CoreData
+import Alamofire
+import SwiftyJSON
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var currrencyIcon: UIImageView!
     @IBOutlet weak var currencyButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var currencyTextField: UITextField!
+    @IBOutlet weak var currencyText: UITextField!
     //var array = [Coins]()
     var nameArray = [String]()
     var iconArray = [String]()
+    var priceArray = [Double]()
+    var calculatedPriceArray = [Double]()
     override func viewWillAppear(_ animated: Bool) {
         //super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        currencyText.text = "0"
         //tableView.reloadData()
         nameArray.removeAll()
         iconArray.removeAll()
+        priceArray.removeAll()
+        calculatedPriceArray.removeAll()
         tableView.keyboardDismissMode = .interactive
         tableView.register(UINib(nibName: "WatchList", bundle: nil), forCellReuseIdentifier: "watchCell")
         if UserDefaults.standard.string(forKey: "wasLaunchedFromSource") != nil{
@@ -36,15 +43,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             defaults.set(true, forKey: "wasLaunchedFromSource")
         }
         loadSelectedSources()
-        tableView.reloadData()
-    }
+//        _ = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(ViewController.loadPrices), userInfo: nil, repeats: true)
 
-    
-    
+        loadPrices()
+        //loadArrays()
+    }
+    //MARK: - Table View Functions
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "watchCell", for: indexPath) as! WatchList
         cell.coinName.text = nameArray[indexPath.row]
         cell.coinIcon.image = UIImage(named: iconArray[indexPath.row])
+        if calculatedPriceArray == []{
+            cell.priceLabel.text = "Loading..."
+        }else{
+            cell.priceLabel.text = String(calculatedPriceArray[indexPath.row])
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -54,13 +67,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
-    @IBAction func currencyPressed(_ sender: Any) {
-    }
     
     @IBAction func addPressed(_ sender: Any) {
         performSegue(withIdentifier: "selectCoins", sender: self)
     }
     
+    //MARK: - Source
     func setSourceBase(){
         print("Set Source Base Called")
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -121,13 +133,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         dash.selected = false
         
         let nem = Coins(context: context)
-        nem.name = "NEM [NEM]"
-        nem.imageName = "NEM"
+        nem.name = "NEM [XEM]"
+        nem.imageName = "XEM"
         nem.selected = false
         
         let iota = Coins(context: context)
         iota.name = "IOTA [MIOTA]"
-        iota.imageName = "MIOTA"
+        iota.imageName = "IOTA"
         iota.selected = false
         
         let usdt = Coins(context: context)
@@ -141,7 +153,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         trx.selected = false
         
         let etc = Coins(context: context)
-        etc.name = "Ethereum [ETC]"
+        etc.name = "Ethereum Cash[ETC]"
         etc.imageName = "ETC"
         etc.selected = false
         
@@ -188,8 +200,83 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             iconArray.append(localArray[i].imageName!)
             //array.append(localArray[i])
         }
+    }
+    
+    @objc func loadPrices(){
+        var globe: String = "https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms="
+        for i in 0..<iconArray.count{
+            globe = globe + "\(iconArray[i]),"
+        }
+        print(globe)
+        parseURL(url: globe)
+    }
+    
+    func parseURL(url: String){
+                if NetworkReachabilityManager()?.isReachable == true{
+                    print("Network Available")
+                    Alamofire.request(url, method: .get)
+                        .responseJSON { response in
+                            if response.result.isSuccess {
+                                
+                                print("Sucess! Got the Coin data")
+                                let coinJSON : JSON = JSON(response.result.value!)
+                                for i in 0..<self.nameArray.count{
+                                    if let coinResult = coinJSON[self.iconArray[i]].double {
+                                        self.priceArray.append(coinResult)
+                                    }
+                                    else{
+                                        print("Error parsing json at \(self.iconArray[i])")
+                                    }
+                                }
+                            } else {
+                                print("Error: \(String(describing: response.result.error))")
+                            }
+                            print(self.priceArray)
+                            self.loadArrays()
+                            self.tableView.reloadData()
+                    }
+                }
+                if NetworkReachabilityManager()?.isReachable == false{
+                    print("No Internet")
+                    let alert = UIAlertController(title: "Oops!", message: "No Internet Connection", preferredStyle: .alert)
+                    let action = UIAlertAction(title: "Settings", style: .default) { (action) in
+                        UIApplication.shared.open(URL(string:UIApplicationOpenSettingsURLString)!)
+                    }
+                    alert.addAction(action)
+                    self.present(alert, animated: true, completion: nil)
+                }
+       
+    }
+    
+    @IBAction func textFieldAction(_ sender: Any) {
+        loadArrays()
+    }
+    func loadArrays(){
+        print("Something is happening")
+        calculatedPriceArray.removeAll()
+        var it = 0
+        for _ in 0..<nameArray.count{
+            if currencyText.text != ""{
+            let calculatedValue = Double(currencyText.text!)! * Double(priceArray[it])
+            calculatedPriceArray.append(calculatedValue)
+            it = it + 1
+            }else{
+                currencyText.text = "0"
+                let calculatedValue = Double(currencyText.text!)! * Double(priceArray[it])
+                calculatedPriceArray.append(calculatedValue)
+                it = it + 1
+            }
+        }
+        print(calculatedPriceArray)
+//        priceArray.removeAll()
+//        priceArray = calculatedPriceArray
         tableView.reloadData()
     }
+    
+    @IBAction func refreshButton(_ sender: Any) {
+        loadPrices()
+    }
+    
 
 }
 
