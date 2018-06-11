@@ -13,6 +13,11 @@
 		B9C170C920CD00CD008A3828 /* CrytoCalcy.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C720CD00CD008A3828 /* CrytoCalcy.xcdatamodeld */; };
 		B9C170CB20CD00CF008A3828 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C170CA20CD00CF008A3828 /* Assets.xcassets */; };
 		B9C170CE20CD00CF008A3828 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C170CC20CD00CF008A3828 /* LaunchScreen.storyboard */; };
+		B9C170DB20CD15E2008A3828 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170D920CD15E2008A3828 /* CoinCell.swift */; };
+		B9C170DC20CD15E2008A3828 /* CoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C170DA20CD15E2008A3828 /* CoinCell.xib */; };
+		B9C170DE20CD1702008A3828 /* CoinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170DD20CD1702008A3828 /* CoinListViewController.swift */; };
+		B9C170E120CD7602008A3828 /* WatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170DF20CD7602008A3828 /* WatchList.swift */; };
+		B9C170E220CD7602008A3828 /* WatchList.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C170E020CD7602008A3828 /* WatchList.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		B9C170CA20CD00CF008A3828 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B9C170CD20CD00CF008A3828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B9C170CF20CD00CF008A3828 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9C170D920CD15E2008A3828 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		B9C170DA20CD15E2008A3828 /* CoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinCell.xib; sourceTree = "<group>"; };
+		B9C170DD20CD1702008A3828 /* CoinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewController.swift; sourceTree = "<group>"; };
+		B9C170DF20CD7602008A3828 /* WatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchList.swift; sourceTree = "<group>"; };
+		B9C170E020CD7602008A3828 /* WatchList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchList.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				B9C170CC20CD00CF008A3828 /* LaunchScreen.storyboard */,
 				B9C170CF20CD00CF008A3828 /* Info.plist */,
 				B9C170C720CD00CD008A3828 /* CrytoCalcy.xcdatamodeld */,
+				B9C170D920CD15E2008A3828 /* CoinCell.swift */,
+				B9C170DA20CD15E2008A3828 /* CoinCell.xib */,
+				B9C170DD20CD1702008A3828 /* CoinListViewController.swift */,
+				B9C170DF20CD7602008A3828 /* WatchList.swift */,
+				B9C170E020CD7602008A3828 /* WatchList.xib */,
 			);
 			path = CrytoCalcy;
 			sourceTree = "<group>";
@@ -125,8 +140,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9C170E220CD7602008A3828 /* WatchList.xib in Resources */,
 				B9C170CE20CD00CF008A3828 /* LaunchScreen.storyboard in Resources */,
 				B9C170CB20CD00CF008A3828 /* Assets.xcassets in Resources */,
+				B9C170DC20CD15E2008A3828 /* CoinCell.xib in Resources */,
 				B9C170C620CD00CD008A3828 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -140,7 +157,10 @@
 			files = (
 				B9C170C320CD00CD008A3828 /* ViewController.swift in Sources */,
 				B9C170C120CD00CD008A3828 /* AppDelegate.swift in Sources */,
+				B9C170DE20CD1702008A3828 /* CoinListViewController.swift in Sources */,
+				B9C170DB20CD15E2008A3828 /* CoinCell.swift in Sources */,
 				B9C170C920CD00CD008A3828 /* CrytoCalcy.xcdatamodeld in Sources */,
+				B9C170E120CD7602008A3828 /* WatchList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CrytoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CrytoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
