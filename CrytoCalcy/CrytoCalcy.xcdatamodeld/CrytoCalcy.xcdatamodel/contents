@@ -5,7 +5,11 @@
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
+    <entity name="DefaultPrice" representedClassName="DefaultPrice" syncable="YES" codeGenerationType="class">
+        <attribute name="value" attributeType="String" syncable="YES"/>
+    </entity>
     <elements>
         <element name="Coins" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="DefaultPrice" positionX="-63" positionY="9" width="128" height="60"/>
     </elements>
 </model>
