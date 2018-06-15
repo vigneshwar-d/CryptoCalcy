@@ -10,7 +10,7 @@ import UIKit
 
 class CurrencyListController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     let currencyName = ["US Dollars", "British Pounds", "Euro","Canadian Dollars","Australian Dollars","Russian Rubels","Chinese Yuan","Japanese Yen"]
-    let currencyImages = ["USD","GBP","EUR","CAD","AUD","RUB","CYN","JPY"]
+    let currencyImages = ["USD","GBP","EUR","CAD","AUD","RUB","CNY","JPY"]
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     @IBOutlet weak var tableView: UITableView!

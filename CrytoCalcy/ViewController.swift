@@ -479,7 +479,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc func loadPrices(){
-        var globe: String = "https://min-api.cryptocompare.com/data/price?fsym=USD&tsyms="
+        var globe: String = "https://min-api.cryptocompare.com/data/price?fsym=\(currencyIcon)&tsyms="
         for i in 0..<iconArray.count{
             globe = globe + "\(iconArray[i]),"
         }
