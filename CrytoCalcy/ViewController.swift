@@ -14,9 +14,10 @@ import SwiftyJSON
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var currrencyIcon: UIImageView!
-    @IBOutlet weak var currencyButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var currencyText: UITextField!
+    @IBOutlet weak var currencyButton: UIButton!
+    @IBOutlet weak var currencyImage: UIImageView!
     //var array = [Coins]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -27,7 +28,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var calculatedPriceArray = [Double]()
     var defaultCurrencyValue = [DefaultPrice]()
     var statusMessage = "Connecting..."
+    var currencyTitle = ""
+    var currencyIcon = ""
+    var currencyInfo = [SelectedCurrency]()
     override func viewWillAppear(_ animated: Bool) {
+        print(FileManager.default.urls(for: .documentDirectory, in: .userDomainMask))
         tableView.delegate = self
         tableView.dataSource = self
         //currencyText.text = "0"
@@ -37,9 +42,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         calculatedPriceArray.removeAll()
         tableView.keyboardDismissMode = .interactive
         tableView.register(UINib(nibName: "WatchList", bundle: nil), forCellReuseIdentifier: "watchCell")
+        
+        
+    
         if UserDefaults.standard.string(forKey: "wasLaunchedFromSource") != nil{
             print("Has been launched before")
-            //let getPrice = DefaultPrice(context: context)
+            
+            print(UserDefaults.standard.string(forKey: "currencyName")!)
+            print(UserDefaults.standard.string(forKey: "currencyIcon")!)
+            currencyTitle = UserDefaults.standard.string(forKey: "currencyName")!
+            currencyIcon = UserDefaults.standard.string(forKey: "currencyIcon")!
+            let requestOne: NSFetchRequest<SelectedCurrency> = SelectedCurrency.fetchRequest()
+            do{
+                try currencyInfo = context.fetch(requestOne)
+            }catch{
+                print("Error getting currency type: \(currencyInfo)")
+            }
+            currencyButton.setTitle(currencyTitle, for: .normal)
+            currencyImage.image = UIImage(named: (currencyIcon))
+            
+            
             let request: NSFetchRequest<DefaultPrice> = DefaultPrice.fetchRequest()
             do{
                 try defaultCurrencyValue = context.fetch(request)
@@ -48,21 +70,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Error fetching currency value \(error)")
             }
             currencyText.text = defaultCurrencyValue.first?.value
+            
+            
         }
         else{
             print("App not launched")
+
             setSourceBase()
+            
             let request: NSFetchRequest<DefaultPrice> = DefaultPrice.fetchRequest()
             do{
                 try defaultCurrencyValue = context.fetch(request)
-                
+
             }catch{
                 print("Error fetching currency value \(error)")
             }
+            
+            
+            
             currencyText.text = defaultCurrencyValue.first?.value
+
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "wasLaunchedFromSource")
+            defaults.set("US Dollars", forKey: "currencyName")
+            defaults.set("USD", forKey: "currencyIcon")
+            
+            
+            currencyTitle = UserDefaults.standard.string(forKey: "currencyName")!
+            currencyIcon = UserDefaults.standard.string(forKey: "currencyIcon")!
+            currencyButton.setTitle(currencyTitle, for: .normal)
+            currencyImage.image = UIImage(named: (currencyIcon))
         }
+        
         loadSelectedSources()
         loadPrices()
     }
@@ -95,7 +134,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         print("Set Source Base Called")
 
         let value = DefaultPrice(context: context)
-        value.value = "1"
+        value.value = "1000"
+        
+        let currency = SelectedCurrency(context: context)
+        currency.currencyName?.removeAll()
+        currency.currencyName?.removeAll()
+        currency.currencyName = "US Dollars"
+        currency.currencyIcon = "USD"
+        
         
         let btc = Coins(context: context)
         btc.name = "Bitcoin [BTC]"
@@ -520,6 +566,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         currencyText.text = "0"
         loadPrices()
     }
+    
+    @IBAction func currencyButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "selectCurrency", sender: self)
+    }
+    
     
 
 }

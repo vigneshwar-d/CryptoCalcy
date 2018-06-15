@@ -19,12 +19,13 @@
 		B9C170DE20CD1702008A3828 /* CoinListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170DD20CD1702008A3828 /* CoinListViewController.swift */; };
 		B9C170E120CD7602008A3828 /* WatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170DF20CD7602008A3828 /* WatchList.swift */; };
 		B9C170E220CD7602008A3828 /* WatchList.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C170E020CD7602008A3828 /* WatchList.xib */; };
+		B9D6071B20D390C600DAD55B /* CurrencyListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D6071A20D390C600DAD55B /* CurrencyListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrytoCalcy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrytoCalcy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy.debug.xcconfig"; sourceTree = "<group>"; };
-		B9C170BD20CD00CD008A3828 /* CrytoCalcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CrytoCalcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B9C170BD20CD00CD008A3828 /* CryptoCalcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCalcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C170C020CD00CD008A3828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C170C220CD00CD008A3828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9C170C520CD00CD008A3828 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -37,6 +38,7 @@
 		B9C170DD20CD1702008A3828 /* CoinListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinListViewController.swift; sourceTree = "<group>"; };
 		B9C170DF20CD7602008A3828 /* WatchList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WatchList.swift; sourceTree = "<group>"; };
 		B9C170E020CD7602008A3828 /* WatchList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WatchList.xib; sourceTree = "<group>"; };
+		B9D6071A20D390C600DAD55B /* CurrencyListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyListController.swift; sourceTree = "<group>"; };
 		F4B216210C0E912736C5E1B7 /* Pods-CrytoCalcy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrytoCalcy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,7 +75,7 @@
 		B9C170BE20CD00CD008A3828 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B9C170BD20CD00CD008A3828 /* CrytoCalcy.app */,
+				B9C170BD20CD00CD008A3828 /* CryptoCalcy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,16 +85,17 @@
 			children = (
 				B9C170C020CD00CD008A3828 /* AppDelegate.swift */,
 				B9C170C220CD00CD008A3828 /* ViewController.swift */,
+				B9C170DD20CD1702008A3828 /* CoinListViewController.swift */,
+				B9D6071A20D390C600DAD55B /* CurrencyListController.swift */,
+				B9C170C720CD00CD008A3828 /* CrytoCalcy.xcdatamodeld */,
 				B9C170C420CD00CD008A3828 /* Main.storyboard */,
 				B9C170CA20CD00CF008A3828 /* Assets.xcassets */,
 				B9C170CC20CD00CF008A3828 /* LaunchScreen.storyboard */,
-				B9C170CF20CD00CF008A3828 /* Info.plist */,
-				B9C170C720CD00CD008A3828 /* CrytoCalcy.xcdatamodeld */,
 				B9C170D920CD15E2008A3828 /* CoinCell.swift */,
 				B9C170DA20CD15E2008A3828 /* CoinCell.xib */,
-				B9C170DD20CD1702008A3828 /* CoinListViewController.swift */,
 				B9C170DF20CD7602008A3828 /* WatchList.swift */,
 				B9C170E020CD7602008A3828 /* WatchList.xib */,
+				B9C170CF20CD00CF008A3828 /* Info.plist */,
 			);
 			path = CrytoCalcy;
 			sourceTree = "<group>";
@@ -109,9 +112,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B9C170BC20CD00CD008A3828 /* CrytoCalcy */ = {
+		B9C170BC20CD00CD008A3828 /* CryptoCalcy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B9C170D220CD00CF008A3828 /* Build configuration list for PBXNativeTarget "CrytoCalcy" */;
+			buildConfigurationList = B9C170D220CD00CF008A3828 /* Build configuration list for PBXNativeTarget "CryptoCalcy" */;
 			buildPhases = (
 				1D87729AD16F2179DB0F8F4D /* [CP] Check Pods Manifest.lock */,
 				B9C170B920CD00CD008A3828 /* Sources */,
@@ -124,9 +127,9 @@
 			);
 			dependencies = (
 			);
-			name = CrytoCalcy;
+			name = CryptoCalcy;
 			productName = CrytoCalcy;
-			productReference = B9C170BD20CD00CD008A3828 /* CrytoCalcy.app */;
+			productReference = B9C170BD20CD00CD008A3828 /* CryptoCalcy.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -144,7 +147,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B9C170B820CD00CD008A3828 /* Build configuration list for PBXProject "CrytoCalcy" */;
+			buildConfigurationList = B9C170B820CD00CD008A3828 /* Build configuration list for PBXProject "CryptoCalcy" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -157,7 +160,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B9C170BC20CD00CD008A3828 /* CrytoCalcy */,
+				B9C170BC20CD00CD008A3828 /* CryptoCalcy */,
 			);
 		};
 /* End PBXProject section */
@@ -242,6 +245,7 @@
 				B9C170C120CD00CD008A3828 /* AppDelegate.swift in Sources */,
 				B9C170DE20CD1702008A3828 /* CoinListViewController.swift in Sources */,
 				B9C170DB20CD15E2008A3828 /* CoinCell.swift in Sources */,
+				B9D6071B20D390C600DAD55B /* CurrencyListController.swift in Sources */,
 				B9C170C920CD00CD008A3828 /* CrytoCalcy.xcdatamodeld in Sources */,
 				B9C170E120CD7602008A3828 /* WatchList.swift in Sources */,
 			);
@@ -391,8 +395,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CrytoCalcy";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CryptoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -407,8 +414,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CrytoCalcy";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CryptoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
@@ -418,7 +428,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B9C170B820CD00CD008A3828 /* Build configuration list for PBXProject "CrytoCalcy" */ = {
+		B9C170B820CD00CD008A3828 /* Build configuration list for PBXProject "CryptoCalcy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9C170D020CD00CF008A3828 /* Debug */,
@@ -427,7 +437,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B9C170D220CD00CF008A3828 /* Build configuration list for PBXNativeTarget "CrytoCalcy" */ = {
+		B9C170D220CD00CF008A3828 /* Build configuration list for PBXNativeTarget "CryptoCalcy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B9C170D320CD00CF008A3828 /* Debug */,
