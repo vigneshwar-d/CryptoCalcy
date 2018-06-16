@@ -99,10 +99,10 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="C1q-e1-pQX">
-                                <rect key="frame" x="0.0" y="200" width="375" height="467"/>
+                                <rect key="frame" x="0.0" y="200" width="375" height="417"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TWV-p4-85q">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="TWV-p4-85q">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TWV-p4-85q" id="Rpa-uM-HP1">
@@ -112,6 +112,13 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iwx-OT-P5c" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="cCO-jW-AbC"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRt-hZ-Now">
                                 <rect key="frame" x="16" y="162" width="30" height="30"/>
                                 <constraints>
@@ -140,19 +147,20 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="iwx-OT-P5c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5es-Q7-su0"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="702-eH-hWi"/>
-                            <constraint firstItem="C1q-e1-pQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="DnV-me-Sjc"/>
+                            <constraint firstItem="iwx-OT-P5c" firstAttribute="top" secondItem="C1q-e1-pQX" secondAttribute="bottom" id="FMJ-ps-oT1"/>
                             <constraint firstItem="X2t-sv-X8q" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="I4D-5G-Zp8"/>
-                            <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="7bA-zf-O0n" secondAttribute="bottom" constant="5" id="La8-Io-YB9"/>
+                            <constraint firstItem="C1q-e1-pQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Jji-s5-6gP"/>
+                            <constraint firstItem="iwx-OT-P5c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NVl-Sw-R65"/>
                             <constraint firstItem="ZRt-hZ-Now" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OuR-b6-rIx"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="top" secondItem="X2t-sv-X8q" secondAttribute="bottom" id="P9d-2R-MvN"/>
                             <constraint firstItem="7bA-zf-O0n" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="12" id="Rbr-5h-BuZ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7bA-zf-O0n" secondAttribute="trailing" constant="17" id="Rya-n2-uuo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="C1q-e1-pQX" secondAttribute="bottom" id="YOh-bj-jAD"/>
-                            <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="50" id="aJm-mM-Ygo"/>
+                            <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="7bA-zf-O0n" secondAttribute="bottom" constant="5" id="ZiA-gz-Bmc"/>
+                            <constraint firstItem="C1q-e1-pQX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bng-wt-xjr"/>
                             <constraint firstItem="ZRt-hZ-Now" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="12" id="l1x-0P-tZ5"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C1q-e1-pQX" secondAttribute="trailing" id="pif-pH-HmZ"/>
-                            <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="ZRt-hZ-Now" secondAttribute="bottom" constant="8" id="r2B-KZ-Oxe"/>
+                            <constraint firstItem="iwx-OT-P5c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qJc-qb-hkv"/>
                             <constraint firstItem="X2t-sv-X8q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="r51-cK-XBw"/>
                             <constraint firstItem="X2t-sv-X8q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="t7o-Nh-KIm"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="uHH-qL-RJ4"/>
@@ -160,6 +168,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="iwx-OT-P5c" id="7h8-Lc-D7T"/>
                         <outlet property="currencyButton" destination="GdM-Zk-O1g" id="CUk-Gp-xQe"/>
                         <outlet property="currencyImage" destination="gK5-7e-laD" id="q5v-2R-pSH"/>
                         <outlet property="currencyText" destination="K23-Dh-HqL" id="CzO-7m-Jss"/>
@@ -215,7 +224,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vC0-GP-zG2">
-                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="499"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="r8G-vH-8zQ">
@@ -241,30 +250,41 @@
                                     <action selector="segView:" destination="4GS-5C-qQx" eventType="valueChanged" id="qqz-t5-ONd"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UYn-Qw-aBt" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ckt-bD-VAH"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstItem="CEe-jR-9r1" firstAttribute="trailing" secondItem="TSG-gF-ePm" secondAttribute="trailing" id="5EK-7o-dD5"/>
-                            <constraint firstItem="vC0-GP-zG2" firstAttribute="trailing" secondItem="TSG-gF-ePm" secondAttribute="trailing" id="Lar-iS-fDc"/>
+                            <constraint firstItem="TSG-gF-ePm" firstAttribute="trailing" secondItem="UYn-Qw-aBt" secondAttribute="trailing" id="9bt-O6-t2z"/>
+                            <constraint firstItem="UYn-Qw-aBt" firstAttribute="top" secondItem="vC0-GP-zG2" secondAttribute="bottom" id="G2w-ON-Ic6"/>
+                            <constraint firstItem="TSG-gF-ePm" firstAttribute="bottom" secondItem="UYn-Qw-aBt" secondAttribute="bottom" id="R1V-Aq-rVO"/>
                             <constraint firstItem="9ci-TE-awe" firstAttribute="top" secondItem="CEe-jR-9r1" secondAttribute="bottom" id="bWg-cg-Wcg"/>
-                            <constraint firstItem="vC0-GP-zG2" firstAttribute="bottom" secondItem="TSG-gF-ePm" secondAttribute="bottom" id="bg5-kC-4n0"/>
-                            <constraint firstItem="vC0-GP-zG2" firstAttribute="leading" secondItem="TSG-gF-ePm" secondAttribute="leading" id="ceG-e6-Ukv"/>
                             <constraint firstItem="CEe-jR-9r1" firstAttribute="top" secondItem="QPT-Si-fFL" secondAttribute="top" id="eKB-Y1-afj"/>
                             <constraint firstItem="9ci-TE-awe" firstAttribute="top" secondItem="CEe-jR-9r1" secondAttribute="bottom" id="j6H-Gv-I0c"/>
-                            <constraint firstItem="vC0-GP-zG2" firstAttribute="top" secondItem="9ci-TE-awe" secondAttribute="bottom" id="mgZ-UB-Ig9"/>
+                            <constraint firstItem="vC0-GP-zG2" firstAttribute="leading" secondItem="TSG-gF-ePm" secondAttribute="leading" id="o3y-cu-76n"/>
                             <constraint firstAttribute="trailing" secondItem="9ci-TE-awe" secondAttribute="trailing" constant="-5" id="oTC-Y2-rfp"/>
                             <constraint firstItem="9ci-TE-awe" firstAttribute="leading" secondItem="QPT-Si-fFL" secondAttribute="leading" constant="-5" id="pwz-Tg-p4h"/>
+                            <constraint firstItem="vC0-GP-zG2" firstAttribute="trailing" secondItem="TSG-gF-ePm" secondAttribute="trailing" id="qCn-0y-Ea1"/>
+                            <constraint firstItem="UYn-Qw-aBt" firstAttribute="leading" secondItem="TSG-gF-ePm" secondAttribute="leading" id="v2c-Ea-wgf"/>
                             <constraint firstItem="CEe-jR-9r1" firstAttribute="leading" secondItem="TSG-gF-ePm" secondAttribute="leading" id="vrz-11-XRX"/>
+                            <constraint firstItem="vC0-GP-zG2" firstAttribute="top" secondItem="9ci-TE-awe" secondAttribute="bottom" id="y4b-UB-8V6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="TSG-gF-ePm"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="UYn-Qw-aBt" id="RXD-J8-jjc"/>
                         <outlet property="tableView" destination="vC0-GP-zG2" id="OIO-f9-btP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C9c-Eg-ux8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="689" y="70"/>
+            <point key="canvasLocation" x="772" y="132.68365817091455"/>
         </scene>
         <!--Currency List Controller-->
         <scene sceneID="tdT-zX-m8N">
@@ -309,10 +329,10 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="e8R-W0-pKf">
-                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <rect key="frame" x="0.0" y="118" width="375" height="499"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tce-Up-POa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="tce-Up-POa">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tce-Up-POa" id="O62-wK-abu">
@@ -335,29 +355,40 @@
                                     <action selector="segView:" destination="EcS-EP-4tO" eventType="valueChanged" id="Ltc-lu-Yd4"/>
                                 </connections>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Psc-ka-tmJ" customClass="GADBannerView">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ZYU-wb-g0g"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="h7i-Io-W4N" secondAttribute="trailing" constant="-5" id="0GD-YX-WcV"/>
+                            <constraint firstItem="Psc-ka-tmJ" firstAttribute="leading" secondItem="Bz1-Ed-hcj" secondAttribute="leading" id="59u-qk-fMw"/>
                             <constraint firstItem="h7i-Io-W4N" firstAttribute="top" secondItem="XiG-dC-Y37" secondAttribute="bottom" id="9VA-EG-4zd"/>
                             <constraint firstItem="XiG-dC-Y37" firstAttribute="trailing" secondItem="Bz1-Ed-hcj" secondAttribute="trailing" id="BZB-CA-uHU"/>
                             <constraint firstItem="h7i-Io-W4N" firstAttribute="leading" secondItem="8WZ-zY-hYZ" secondAttribute="leading" constant="-5" id="Dgf-sx-4Gj"/>
-                            <constraint firstItem="e8R-W0-pKf" firstAttribute="bottom" secondItem="Bz1-Ed-hcj" secondAttribute="bottom" id="LYa-mZ-XPp"/>
+                            <constraint firstItem="e8R-W0-pKf" firstAttribute="top" secondItem="h7i-Io-W4N" secondAttribute="bottom" id="IYC-Hj-Am2"/>
+                            <constraint firstItem="Psc-ka-tmJ" firstAttribute="top" secondItem="e8R-W0-pKf" secondAttribute="bottom" id="WSX-6K-JbI"/>
                             <constraint firstItem="XiG-dC-Y37" firstAttribute="top" secondItem="8WZ-zY-hYZ" secondAttribute="top" id="bAC-8G-tO0"/>
-                            <constraint firstItem="e8R-W0-pKf" firstAttribute="leading" secondItem="Bz1-Ed-hcj" secondAttribute="leading" id="cYe-iN-8pf"/>
-                            <constraint firstItem="e8R-W0-pKf" firstAttribute="top" secondItem="h7i-Io-W4N" secondAttribute="bottom" id="iJF-dN-v5D"/>
-                            <constraint firstItem="e8R-W0-pKf" firstAttribute="trailing" secondItem="Bz1-Ed-hcj" secondAttribute="trailing" id="nsW-zh-BOC"/>
+                            <constraint firstItem="Bz1-Ed-hcj" firstAttribute="trailing" secondItem="Psc-ka-tmJ" secondAttribute="trailing" id="dTG-dA-5nE"/>
+                            <constraint firstItem="Bz1-Ed-hcj" firstAttribute="bottom" secondItem="Psc-ka-tmJ" secondAttribute="bottom" id="f4a-bd-rkF"/>
+                            <constraint firstItem="e8R-W0-pKf" firstAttribute="trailing" secondItem="Bz1-Ed-hcj" secondAttribute="trailing" id="gsZ-t6-NUV"/>
+                            <constraint firstItem="e8R-W0-pKf" firstAttribute="leading" secondItem="Bz1-Ed-hcj" secondAttribute="leading" id="hBe-S5-O48"/>
                             <constraint firstItem="XiG-dC-Y37" firstAttribute="leading" secondItem="Bz1-Ed-hcj" secondAttribute="leading" id="ywA-1c-Z01"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Bz1-Ed-hcj"/>
                     </view>
                     <connections>
+                        <outlet property="bannerView" destination="Psc-ka-tmJ" id="aIl-zW-j5o"/>
                         <outlet property="tableView" destination="e8R-W0-pKf" id="cey-1g-qa2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gnt-GY-fjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405.5999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-1178.4000000000001" y="132.68365817091455"/>
         </scene>
     </scenes>
     <resources>

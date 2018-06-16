@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import Alamofire
 import SwiftyJSON
+import GoogleMobileAds
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -18,6 +19,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var currencyText: UITextField!
     @IBOutlet weak var currencyButton: UIButton!
     @IBOutlet weak var currencyImage: UIImageView!
+    @IBOutlet weak var bannerView: GADBannerView!
     //var array = [Coins]()
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
@@ -40,6 +42,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         iconArray.removeAll()
         priceArray.removeAll()
         calculatedPriceArray.removeAll()
+        //bannerView.delegate = self
+        bannerView.rootViewController = self
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.load(GADRequest())
         tableView.keyboardDismissMode = .interactive
         tableView.register(UINib(nibName: "WatchList", bundle: nil), forCellReuseIdentifier: "watchCell")
         

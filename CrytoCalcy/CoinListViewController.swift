@@ -8,18 +8,23 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
 class CoinListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     var array = [Coins]()
    // var filteredData = [Coins]()
+    @IBOutlet weak var bannerView: GADBannerView!
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     //var isSearching = false
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        bannerView.rootViewController = self
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.load(GADRequest())
         tableView.keyboardDismissMode = .interactive
         tableView.register(UINib(nibName: "CoinCell", bundle: nil), forCellReuseIdentifier: "coinCell")
         loadAllItems()

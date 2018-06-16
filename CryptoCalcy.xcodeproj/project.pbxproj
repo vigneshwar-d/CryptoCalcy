@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3415C4E8A822B2AF505DE729 /* Pods_CrytoCalcy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */; };
+		B919822A20D4EA1300DDDA17 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B919822920D4EA1300DDDA17 /* GoogleMobileAds.framework */; };
 		B9C170C120CD00CD008A3828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C020CD00CD008A3828 /* AppDelegate.swift */; };
 		B9C170C320CD00CD008A3828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C220CD00CD008A3828 /* ViewController.swift */; };
 		B9C170C620CD00CD008A3828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C170C420CD00CD008A3828 /* Main.storyboard */; };
@@ -20,11 +21,16 @@
 		B9C170E120CD7602008A3828 /* WatchList.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170DF20CD7602008A3828 /* WatchList.swift */; };
 		B9C170E220CD7602008A3828 /* WatchList.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C170E020CD7602008A3828 /* WatchList.xib */; };
 		B9D6071B20D390C600DAD55B /* CurrencyListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D6071A20D390C600DAD55B /* CurrencyListController.swift */; };
+		D9BA87FA7E658C1F5081D130 /* Pods_CryptoCalcy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CF5C833107F1F7262B4A39 /* Pods_CryptoCalcy.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CrytoCalcy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		72AB637F4A496CB5C5CD7789 /* Pods-CryptoCalcy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCalcy.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCalcy/Pods-CryptoCalcy.release.xcconfig"; sourceTree = "<group>"; };
+		74CF5C833107F1F7262B4A39 /* Pods_CryptoCalcy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoCalcy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrytoCalcy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy.debug.xcconfig"; sourceTree = "<group>"; };
+		A899B42F0C97C8439B3392F4 /* Pods-CryptoCalcy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCalcy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCalcy/Pods-CryptoCalcy.debug.xcconfig"; sourceTree = "<group>"; };
+		B919822920D4EA1300DDDA17 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../Downloads/GoogleMobileAdsSdkiOS-7.31.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
 		B9C170BD20CD00CD008A3828 /* CryptoCalcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCalcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C170C020CD00CD008A3828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C170C220CD00CD008A3828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,7 +53,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B919822A20D4EA1300DDDA17 /* GoogleMobileAds.framework in Frameworks */,
 				3415C4E8A822B2AF505DE729 /* Pods_CrytoCalcy.framework in Frameworks */,
+				D9BA87FA7E658C1F5081D130 /* Pods_CryptoCalcy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,7 +65,9 @@
 		4F2FC566AF0D9F01F5E5D343 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B919822920D4EA1300DDDA17 /* GoogleMobileAds.framework */,
 				53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */,
+				74CF5C833107F1F7262B4A39 /* Pods_CryptoCalcy.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -105,6 +115,8 @@
 			children = (
 				A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */,
 				F4B216210C0E912736C5E1B7 /* Pods-CrytoCalcy.release.xcconfig */,
+				A899B42F0C97C8439B3392F4 /* Pods-CryptoCalcy.debug.xcconfig */,
+				72AB637F4A496CB5C5CD7789 /* Pods-CryptoCalcy.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -192,7 +204,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-CrytoCalcy-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-CryptoCalcy-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -205,7 +217,7 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCalcy/Pods-CryptoCalcy-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
@@ -216,7 +228,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCalcy/Pods-CryptoCalcy-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BCCFB2D740A90B3EE6AE2D88 /* [CP] Copy Pods Resources */ = {
@@ -231,7 +243,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptoCalcy/Pods-CryptoCalcy-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -389,16 +401,13 @@
 		};
 		B9C170D320CD00CF008A3828 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */;
+			baseConfigurationReference = A899B42F0C97C8439B3392F4 /* Pods-CryptoCalcy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CryptoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -408,16 +417,13 @@
 		};
 		B9C170D420CD00CF008A3828 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F4B216210C0E912736C5E1B7 /* Pods-CrytoCalcy.release.xcconfig */;
+			baseConfigurationReference = 72AB637F4A496CB5C5CD7789 /* Pods-CryptoCalcy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CryptoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

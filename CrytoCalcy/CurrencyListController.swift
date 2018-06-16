@@ -8,15 +8,20 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
 class CurrencyListController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var array = [Coins]()
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var bannerView: GADBannerView!
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        bannerView.rootViewController = self
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.load(GADRequest())
         tableView.register(UINib(nibName: "CoinCell", bundle: nil), forCellReuseIdentifier: "coinCell")
         loadAllItems()
     }
