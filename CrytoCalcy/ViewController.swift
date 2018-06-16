@@ -44,7 +44,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         calculatedPriceArray.removeAll()
         //bannerView.delegate = self
         bannerView.rootViewController = self
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-6592950954286804/2301485709"
         bannerView.load(GADRequest())
         tableView.keyboardDismissMode = .interactive
         tableView.register(UINib(nibName: "WatchList", bundle: nil), forCellReuseIdentifier: "watchCell")

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3415C4E8A822B2AF505DE729 /* Pods_CrytoCalcy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 53AB39014709CF2C29BA101E /* Pods_CrytoCalcy.framework */; };
 		B919822A20D4EA1300DDDA17 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B919822920D4EA1300DDDA17 /* GoogleMobileAds.framework */; };
 		B9C170C120CD00CD008A3828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C020CD00CD008A3828 /* AppDelegate.swift */; };
 		B9C170C320CD00CD008A3828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C220CD00CD008A3828 /* ViewController.swift */; };
@@ -54,7 +53,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B919822A20D4EA1300DDDA17 /* GoogleMobileAds.framework in Frameworks */,
-				3415C4E8A822B2AF505DE729 /* Pods_CrytoCalcy.framework in Frameworks */,
 				D9BA87FA7E658C1F5081D130 /* Pods_CryptoCalcy.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,7 +334,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -390,7 +388,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
