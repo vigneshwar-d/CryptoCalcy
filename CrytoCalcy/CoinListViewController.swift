@@ -68,17 +68,38 @@ class CoinListViewController: UIViewController, UITableViewDelegate, UITableView
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-//    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-//        if searchBar.text == nil || searchBar.text == "" {
-//            isSearching = false
-//            view.endEditing(true)
-//            tableView.reloadData()
-//        }else{
-//            isSearching = true
-//            filteredData = array.filter({($0.name?.contains(searchBar.text!))!})
-//            tableView.reloadData()
-//        }
-//    }
+
+    
+    @IBAction func segView(_ sender: UISegmentedControl) {
+        print("\(sender.selectedSegmentIndex)")
+        switch sender.selectedSegmentIndex{
+        case 0:
+            loadAllItems()
+            tableView.reloadData()
+        case 1:
+            let request: NSFetchRequest<Coins> = Coins.fetchRequest()
+            let predicate = NSPredicate(format: "currencyType == 0")
+            request.predicate = predicate
+            do{
+                array = try context.fetch(request)
+            }catch{
+                print("Error getting data with predicate")
+            }
+            tableView.reloadData()
+        case 2:
+            let request: NSFetchRequest<Coins> = Coins.fetchRequest()
+            let predicate = NSPredicate(format: "currencyType == 1")
+            request.predicate = predicate
+            do{
+                array = try context.fetch(request)
+            }catch{
+                print("Error getting data with predicate")
+            }
+            tableView.reloadData()
+        default:
+            print("A defautlt value")
+        }
+    }
 }
 
 

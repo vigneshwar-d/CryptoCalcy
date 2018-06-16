@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14135" systemVersion="17F77" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Coins" representedClassName="Coins" syncable="YES" codeGenerationType="class">
-        <attribute name="imageName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="selected" optional="YES" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="currencyType" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="imageName" attributeType="String" syncable="YES"/>
+        <attribute name="name" attributeType="String" syncable="YES"/>
+        <attribute name="selected" attributeType="Boolean" usesScalarValueType="YES" syncable="YES"/>
     </entity>
     <entity name="DefaultPrice" representedClassName="DefaultPrice" syncable="YES" codeGenerationType="class">
         <attribute name="value" attributeType="String" syncable="YES"/>
@@ -13,7 +14,7 @@
         <attribute name="currencyName" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Coins" positionX="-63" positionY="-18" width="128" height="90"/>
+        <element name="Coins" positionX="-63" positionY="-18" width="128" height="105"/>
         <element name="DefaultPrice" positionX="-63" positionY="9" width="128" height="60"/>
         <element name="SelectedCurrency" positionX="-63" positionY="9" width="128" height="75"/>
     </elements>
