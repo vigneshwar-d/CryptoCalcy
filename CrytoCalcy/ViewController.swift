@@ -83,6 +83,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             print("App not launched")
 
             setSourceBase()
+            updateWithNewData()
             
             let request: NSFetchRequest<DefaultPrice> = DefaultPrice.fetchRequest()
             do{
@@ -111,6 +112,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         loadSelectedSources()
         loadPrices()
     }
+    
+   
+    
     //MARK: - Table View Functions
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "watchCell", for: indexPath) as! WatchList
@@ -135,7 +139,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "selectCoins", sender: self)
     }
     
-    //MARK: - Source
+    //MARK: - Setting All The Sources
+    
     func setSourceBase(){
         print("Set Source Base Called")
 
@@ -556,13 +561,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         jpy.currencyType = false
         
         let rub = Coins(context: context)
-        rub.name = "Russian Rubel [RUB]"
+        rub.name = "Russian Ruble [RUB]"
         rub.imageName = "RUB"
         rub.selected = false
         rub.currencyType = false
         
         let inr = Coins(context: context)
-        inr.name = "Indian Rupeese [INR]"
+        inr.name = "Indian Rupees [INR]"
         inr.imageName = "INR"
         inr.selected = false
         inr.currencyType = false
@@ -580,6 +585,183 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+    
+    func updateWithNewData(){
+        print("updateWithNewData Called")
+        
+        let value = DefaultPrice(context: context)
+        value.value = "1000"
+        
+        //MARK: - Cryptos
+        
+        
+        
+        //MARK: - Currencies
+        
+        let brl = Coins(context: context)
+        brl.name = "Brazilian Real [BRL]"
+        brl.imageName = "BRL"
+        brl.selected = false
+        brl.currencyType = false
+        
+        let clp = Coins(context: context)
+        clp.name = "Chilean Peso [CLP]"
+        clp.imageName = "CLP"
+        clp.selected = false
+        clp.currencyType = false
+        
+        let czk = Coins(context: context)
+        czk.name = "Czech Koruna [CZK]"
+        czk.imageName = "CZK"
+        czk.selected = false
+        czk.currencyType = false
+        
+        let dkk = Coins(context: context)
+        dkk.name = "Danish Krone [DKK]"
+        dkk.imageName = "DKK"
+        dkk.selected = false
+        dkk.currencyType = false
+        
+        let hkd = Coins(context: context)
+        hkd.name = "Hong Kong Dollar [HKD]"
+        hkd.imageName = "HKD"
+        hkd.selected = false
+        hkd.currencyType = false
+        
+        let huf = Coins(context: context)
+        huf.name = "Hungarian Forint [HUF]"
+        huf.imageName = "HUF"
+        huf.selected = false
+        huf.currencyType = false
+        
+        let idr = Coins(context: context)
+        idr.name = "Indonesian Rupiah [IDR]"
+        idr.imageName = "IDR"
+        idr.selected = false
+        idr.currencyType = false
+        
+        let myr = Coins(context: context)
+        myr.name = "Malaysian Ringgit [MYR]"
+        myr.imageName = "MYR"
+        myr.selected = false
+        myr.currencyType = false
+        
+        let mxn = Coins(context: context)
+        mxn.name = "Mexicon Peso [MXN]"
+        mxn.imageName = "MXN"
+        mxn.selected = false
+        mxn.currencyType = false
+        
+        let nzd = Coins(context: context)
+        nzd.name = "New Zealand Dollar [NZD]"
+        nzd.imageName = "NZD"
+        nzd.selected = false
+        nzd.currencyType = false
+        
+        let nok = Coins(context: context)
+        nok.name = "Norwegian Krone [NOK]"
+        nok.imageName = "NOK"
+        nok.selected = false
+        nok.currencyType = false
+        
+        let php = Coins(context: context)
+        php.name = "Philippine Peso [PHP]"
+        php.imageName = "PHP"
+        php.selected = false
+        php.currencyType = false
+        
+        let pln = Coins(context: context)
+        pln.name = "Polish Zloty [PLN]"
+        pln.imageName = "PLN"
+        pln.selected = false
+        pln.currencyType = false
+        
+        let sgd = Coins(context: context)
+        sgd.name = "Singapore Dollar [SGD]"
+        sgd.imageName = "SGD"
+        sgd.selected = false
+        sgd.currencyType = false
+        
+        let zar = Coins(context: context)
+        zar.name = "South African Rand [ZAR]"
+        zar.imageName = "ZAR"
+        zar.selected = false
+        zar.currencyType = false
+        
+        let sek = Coins(context: context)
+        sek.name = "Swedish Krona [SEK]"
+        sek.imageName = "SEK"
+        sek.selected = false
+        sek.currencyType = false
+        
+        let chf = Coins(context: context)
+        chf.name = "Swiss Franc [CHF]"
+        chf.imageName = "CHF"
+        chf.selected = false
+        chf.currencyType = false
+        
+        let twd = Coins(context: context)
+        twd.name = "Taiwan Dollar [TWD]"
+        twd.imageName = "TWD"
+        twd.selected = false
+        twd.currencyType = false
+        
+        let thb = Coins(context: context)
+        thb.name = "Thai Baht [THB]"
+        thb.imageName = "THB"
+        thb.selected = false
+        thb.currencyType = false
+        
+        let trky = Coins(context: context)
+        trky.name = "Turkish Lira [TRY]"
+        trky.imageName = "TRY"
+        trky.selected = false
+        trky.currencyType = false
+        
+        let sar = Coins(context: context)
+        sar.name = "Saudi Arabian Riyal [SAR]"
+        sar.imageName = "SAR"
+        sar.selected = false
+        sar.currencyType = false
+        
+        let yer = Coins(context: context)
+        yer.name = "Yemen Riyal [YER]"
+        yer.imageName = "YER"
+        yer.selected = false
+        yer.currencyType = false
+        
+        let omr = Coins(context: context)
+        omr.name = "Oman Riyal [OMR]"
+        omr.imageName = "OMR"
+        omr.selected = false
+        omr.currencyType = false
+        
+        let aed = Coins(context: context)
+        aed.name = "UAE Dirham [AED]"
+        aed.imageName = "AED"
+        aed.selected = false
+        aed.currencyType = false
+        
+        let qar = Coins(context: context)
+        qar.name = "Qatar Riyal [QAR]"
+        qar.imageName = "QAR"
+        qar.selected = false
+        qar.currencyType = false
+        
+        let kwd = Coins(context: context)
+        kwd.name = "Kuwait Dinar [KWD]"
+        kwd.imageName = "KWD"
+        kwd.selected = false
+        kwd.currencyType = false
+        
+        do{
+            try context.save()
+        }catch{
+            print("Error Saving Data")
+        }
+    }
+    
+    //MARK: - Loading and Parsing
     func loadSelectedSources(){
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         var localArray = [Coins]()
@@ -645,6 +827,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
        
     }
     
+    
+    //MARK: - IBActions
     @IBAction func textFieldAction(_ sender: Any) {
         loadArrays()
     }
