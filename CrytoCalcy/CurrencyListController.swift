@@ -21,7 +21,7 @@ class CurrencyListController: UIViewController, UITableViewDelegate, UITableView
         tableView.dataSource = self
         bannerView.rootViewController = self
         bannerView.adUnitID = "ca-app-pub-6592950954286804/2301485709"
-        bannerView.load(GADRequest())
+        //bannerView.load(GADRequest())
         tableView.register(UINib(nibName: "CoinCell", bundle: nil), forCellReuseIdentifier: "coinCell")
         loadAllItems()
     }

@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //bannerView.delegate = self
         bannerView.rootViewController = self
         bannerView.adUnitID = "ca-app-pub-6592950954286804/2301485709"
-        bannerView.load(GADRequest())
+        //bannerView.load(GADRequest())
         tableView.keyboardDismissMode = .interactive
         tableView.register(UINib(nibName: "WatchList", bundle: nil), forCellReuseIdentifier: "watchCell")
         
@@ -54,6 +54,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if UserDefaults.standard.string(forKey: "wasLaunchedFromSource") != nil{
             print("Has been launched before")
             
+            if UserDefaults.standard.string(forKey: "updateWithNewData") != nil{
+                print("\nUpdating With Data\n")
+                updateWithNewData()
+            }else{
+                print("\nAlready Updated with new data\n")
+            }
             print(UserDefaults.standard.string(forKey: "currencyName")!)
             print(UserDefaults.standard.string(forKey: "currencyIcon")!)
             currencyTitle = UserDefaults.standard.string(forKey: "currencyName")!
@@ -93,12 +99,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 print("Error fetching currency value \(error)")
             }
             
-            
-            
             currencyText.text = defaultCurrencyValue.first?.value
 
             let defaults = UserDefaults.standard
             defaults.set(true, forKey: "wasLaunchedFromSource")
+            defaults.set(true, forKey: "updateWithNewData")
             defaults.set("US Dollars", forKey: "currencyName")
             defaults.set("USD", forKey: "currencyIcon")
             
