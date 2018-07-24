@@ -54,9 +54,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if UserDefaults.standard.string(forKey: "wasLaunchedFromSource") != nil{
             print("Has been launched before")
             
-            if UserDefaults.standard.string(forKey: "updateWithNewData") != nil{
+            if UserDefaults.standard.string(forKey: "updateWithNewData") == nil{
                 print("\nUpdating With Data\n")
                 updateWithNewData()
+                let defaults = UserDefaults.standard
+                defaults.set(true, forKey: "updateWithNewData")
             }else{
                 print("\nAlready Updated with new data\n")
             }
