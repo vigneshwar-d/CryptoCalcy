@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -131,11 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7bA-zf-O0n">
-                                <rect key="frame" x="318" y="162" width="40" height="33"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="40" id="Wa9-I3-EHs"/>
-                                    <constraint firstAttribute="height" constant="33" id="wXe-Dt-odx"/>
-                                </constraints>
+                                <rect key="frame" x="301" y="162" width="40" height="33"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                 <state key="normal" title="Clear">
                                     <color key="titleColor" red="0.0" green="0.87928299489999995" blue="0.02678071165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -147,6 +142,7 @@
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
+                            <constraint firstItem="7bA-zf-O0n" firstAttribute="leading" secondItem="ZRt-hZ-Now" secondAttribute="trailing" constant="255" id="0H4-HC-9HG"/>
                             <constraint firstItem="iwx-OT-P5c" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5es-Q7-su0"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="702-eH-hWi"/>
                             <constraint firstItem="iwx-OT-P5c" firstAttribute="top" secondItem="C1q-e1-pQX" secondAttribute="bottom" id="FMJ-ps-oT1"/>
@@ -155,9 +151,9 @@
                             <constraint firstItem="iwx-OT-P5c" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NVl-Sw-R65"/>
                             <constraint firstItem="ZRt-hZ-Now" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="OuR-b6-rIx"/>
                             <constraint firstItem="V5r-ni-KCB" firstAttribute="top" secondItem="X2t-sv-X8q" secondAttribute="bottom" id="P9d-2R-MvN"/>
-                            <constraint firstItem="7bA-zf-O0n" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="12" id="Rbr-5h-BuZ"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7bA-zf-O0n" secondAttribute="trailing" constant="17" id="Rya-n2-uuo"/>
-                            <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="7bA-zf-O0n" secondAttribute="bottom" constant="5" id="ZiA-gz-Bmc"/>
+                            <constraint firstItem="7bA-zf-O0n" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="12" id="PSw-4K-k6f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="7bA-zf-O0n" secondAttribute="trailing" constant="34" id="VH0-wP-jgY"/>
+                            <constraint firstItem="C1q-e1-pQX" firstAttribute="top" secondItem="7bA-zf-O0n" secondAttribute="bottom" constant="5" id="b0V-Yj-FHX"/>
                             <constraint firstItem="C1q-e1-pQX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="bng-wt-xjr"/>
                             <constraint firstItem="ZRt-hZ-Now" firstAttribute="top" secondItem="V5r-ni-KCB" secondAttribute="bottom" constant="12" id="l1x-0P-tZ5"/>
                             <constraint firstItem="iwx-OT-P5c" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qJc-qb-hkv"/>

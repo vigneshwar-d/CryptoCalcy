@@ -30,7 +30,11 @@ class CurrencyListController: UIViewController, UITableViewDelegate, UITableView
         let cell = tableView.dequeueReusableCell(withIdentifier: "coinCell", for: indexPath) as! CoinCell
         cell.coinName.text = array[indexPath.row].name
         cell.coinIcon.image = UIImage(named: array[indexPath.row].imageName!)
-        cell.accessoryType = .none
+        if array[indexPath.row].name == UserDefaults.standard.string(forKey: "currencyName")!{
+            cell.accessoryType = .checkmark
+        }else{
+            cell.accessoryType = .none
+        }
         return cell
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

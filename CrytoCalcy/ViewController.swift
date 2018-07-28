@@ -617,17 +617,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         clp.selected = false
         clp.currencyType = false
         
-        let czk = Coins(context: context)
-        czk.name = "Czech Koruna [CZK]"
-        czk.imageName = "CZK"
-        czk.selected = false
-        czk.currencyType = false
+//        let czk = Coins(context: context)
+//        czk.name = "Czech Koruna [CZK]"
+//        czk.imageName = "CZK"
+//        czk.selected = false
+//        czk.currencyType = false
         
-        let dkk = Coins(context: context)
-        dkk.name = "Danish Krone [DKK]"
-        dkk.imageName = "DKK"
-        dkk.selected = false
-        dkk.currencyType = false
+//        let dkk = Coins(context: context)
+//        dkk.name = "Danish Krone [DKK]"
+//        dkk.imageName = "DKK"
+//        dkk.selected = false
+//        dkk.currencyType = false
         
         let hkd = Coins(context: context)
         hkd.name = "Hong Kong Dollar [HKD]"
@@ -635,11 +635,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         hkd.selected = false
         hkd.currencyType = false
         
-        let huf = Coins(context: context)
-        huf.name = "Hungarian Forint [HUF]"
-        huf.imageName = "HUF"
-        huf.selected = false
-        huf.currencyType = false
+//        let huf = Coins(context: context)
+//        huf.name = "Hungarian Forint [HUF]"
+//        huf.imageName = "HUF"
+//        huf.selected = false
+//        huf.currencyType = false
         
         let idr = Coins(context: context)
         idr.name = "Indonesian Rupiah [IDR]"
@@ -659,17 +659,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         mxn.selected = false
         mxn.currencyType = false
         
-        let nzd = Coins(context: context)
-        nzd.name = "New Zealand Dollar [NZD]"
-        nzd.imageName = "NZD"
-        nzd.selected = false
-        nzd.currencyType = false
+//        let nzd = Coins(context: context)
+//        nzd.name = "New Zealand Dollar [NZD]"
+//        nzd.imageName = "NZD"
+//        nzd.selected = false
+//        nzd.currencyType = false
         
-        let nok = Coins(context: context)
-        nok.name = "Norwegian Krone [NOK]"
-        nok.imageName = "NOK"
-        nok.selected = false
-        nok.currencyType = false
+//        let nok = Coins(context: context)
+//        nok.name = "Norwegian Krone [NOK]"
+//        nok.imageName = "NOK"
+//        nok.selected = false
+//        nok.currencyType = false
         
         let php = Coins(context: context)
         php.name = "Philippine Peso [PHP]"
@@ -695,11 +695,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         zar.selected = false
         zar.currencyType = false
         
-        let sek = Coins(context: context)
-        sek.name = "Swedish Krona [SEK]"
-        sek.imageName = "SEK"
-        sek.selected = false
-        sek.currencyType = false
+//        let sek = Coins(context: context)
+//        sek.name = "Swedish Krona [SEK]"
+//        sek.imageName = "SEK"
+//        sek.selected = false
+//        sek.currencyType = false
         
         let chf = Coins(context: context)
         chf.name = "Swiss Franc [CHF]"
@@ -707,11 +707,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         chf.selected = false
         chf.currencyType = false
         
-        let twd = Coins(context: context)
-        twd.name = "Taiwan Dollar [TWD]"
-        twd.imageName = "TWD"
-        twd.selected = false
-        twd.currencyType = false
+//        let twd = Coins(context: context)
+//        twd.name = "Taiwan Dollar [TWD]"
+//        twd.imageName = "TWD"
+//        twd.selected = false
+//        twd.currencyType = false
         
         let thb = Coins(context: context)
         thb.name = "Thai Baht [THB]"
@@ -725,41 +725,41 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         trky.selected = false
         trky.currencyType = false
         
-        let sar = Coins(context: context)
-        sar.name = "Saudi Arabian Riyal [SAR]"
-        sar.imageName = "SAR"
-        sar.selected = false
-        sar.currencyType = false
+//        let sar = Coins(context: context)
+//        sar.name = "Saudi Arabian Riyal [SAR]"
+//        sar.imageName = "SAR"
+//        sar.selected = false
+//        sar.currencyType = false
         
-        let yer = Coins(context: context)
-        yer.name = "Yemen Riyal [YER]"
-        yer.imageName = "YER"
-        yer.selected = false
-        yer.currencyType = false
+//        let yer = Coins(context: context)
+//        yer.name = "Yemen Riyal [YER]"
+//        yer.imageName = "YER"
+//        yer.selected = false
+//        yer.currencyType = false
         
-        let omr = Coins(context: context)
-        omr.name = "Oman Riyal [OMR]"
-        omr.imageName = "OMR"
-        omr.selected = false
-        omr.currencyType = false
+//        let omr = Coins(context: context)
+//        omr.name = "Oman Riyal [OMR]"
+//        omr.imageName = "OMR"
+//        omr.selected = false
+//        omr.currencyType = false
         
-        let aed = Coins(context: context)
-        aed.name = "UAE Dirham [AED]"
-        aed.imageName = "AED"
-        aed.selected = false
-        aed.currencyType = false
+//        let aed = Coins(context: context)
+//        aed.name = "UAE Dirham [AED]"
+//        aed.imageName = "AED"
+//        aed.selected = false
+//        aed.currencyType = false
         
-        let qar = Coins(context: context)
-        qar.name = "Qatar Riyal [QAR]"
-        qar.imageName = "QAR"
-        qar.selected = false
-        qar.currencyType = false
+//        let qar = Coins(context: context)
+//        qar.name = "Qatar Riyal [QAR]"
+//        qar.imageName = "QAR"
+//        qar.selected = false
+//        qar.currencyType = false
         
-        let kwd = Coins(context: context)
-        kwd.name = "Kuwait Dinar [KWD]"
-        kwd.imageName = "KWD"
-        kwd.selected = false
-        kwd.currencyType = false
+//        let kwd = Coins(context: context)
+//        kwd.name = "Kuwait Dinar [KWD]"
+//        kwd.imageName = "KWD"
+//        kwd.selected = false
+//        kwd.currencyType = false
         
         do{
             try context.save()
@@ -811,6 +811,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                     }
                                     else{
                                         print("Error parsing json at \(self.iconArray[i])")
+                                        self.statusMessage = "Conversion not available"
+                                        self.tableView.reloadData()
                                     }
                                 }
                             } else {
