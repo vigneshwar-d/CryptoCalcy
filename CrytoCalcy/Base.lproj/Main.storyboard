@@ -21,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CryptoCalcy" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXT-xm-eg6">
-                                        <rect key="frame" x="102" y="6" width="172" height="39"/>
+                                        <rect key="frame" x="101.5" y="6" width="172" height="39"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="30"/>
                                         <color key="textColor" red="0.0" green="0.87928299489999995" blue="0.02678071165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -39,11 +39,22 @@
                                             <action selector="addPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tVp-gl-sqn"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLu-VJ-AKe">
+                                        <rect key="frame" x="27" y="8" width="34" height="37"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="34" id="6bG-xg-t5e"/>
+                                            <constraint firstAttribute="height" constant="37" id="QBy-QG-CXM"/>
+                                        </constraints>
+                                        <state key="normal" backgroundImage="disableAds"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <constraints>
+                                    <constraint firstItem="fLu-VJ-AKe" firstAttribute="leading" secondItem="X2t-sv-X8q" secondAttribute="leading" constant="27" id="8T9-fD-eJV"/>
+                                    <constraint firstItem="fLu-VJ-AKe" firstAttribute="top" secondItem="X2t-sv-X8q" secondAttribute="top" constant="8" id="9Zc-ln-xrQ"/>
                                     <constraint firstAttribute="trailing" secondItem="qVa-JH-JlD" secondAttribute="trailing" constant="8" id="GAP-i4-ZHx"/>
                                     <constraint firstAttribute="bottom" secondItem="qVa-JH-JlD" secondAttribute="bottom" constant="12" id="HFU-fh-hWd"/>
+                                    <constraint firstAttribute="bottom" secondItem="fLu-VJ-AKe" secondAttribute="bottom" constant="5" id="Joc-1B-uYB"/>
                                     <constraint firstItem="SXT-xm-eg6" firstAttribute="centerY" secondItem="X2t-sv-X8q" secondAttribute="centerY" id="W30-Xy-jG4"/>
                                     <constraint firstItem="SXT-xm-eg6" firstAttribute="centerX" secondItem="X2t-sv-X8q" secondAttribute="centerX" id="Z94-Po-Z0i"/>
                                     <constraint firstItem="qVa-JH-JlD" firstAttribute="top" secondItem="X2t-sv-X8q" secondAttribute="top" constant="13" id="dbu-kd-8aP"/>
@@ -176,7 +187,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23.199999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="-23.199999999999999" y="131.78410794602701"/>
         </scene>
         <!--Coin List View Controller-->
         <scene sceneID="yiS-EU-rYQ">
@@ -190,7 +201,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert Into..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCE-HG-V3w">
-                                        <rect key="frame" x="106" y="28.5" width="163" height="33"/>
+                                        <rect key="frame" x="106.5" y="28.5" width="163" height="33"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.87928299489999995" blue="0.02678071165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -294,7 +305,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="90"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Convert From.." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8PW-x0-c0B">
-                                        <rect key="frame" x="103" y="28.5" width="169" height="33"/>
+                                        <rect key="frame" x="103.5" y="28.5" width="169" height="33"/>
                                         <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                         <color key="textColor" red="0.0" green="0.87928299489999995" blue="0.02678071165" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -390,5 +401,6 @@
     <resources>
         <image name="USD" width="250" height="250"/>
         <image name="add-plus-increase-join-512" width="512" height="512"/>
+        <image name="disableAds" width="200" height="200"/>
     </resources>
 </document>
