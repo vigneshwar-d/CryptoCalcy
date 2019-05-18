@@ -46,6 +46,9 @@
                                             <constraint firstAttribute="height" constant="37" id="QBy-QG-CXM"/>
                                         </constraints>
                                         <state key="normal" backgroundImage="disableAds"/>
+                                        <connections>
+                                            <action selector="disableAdsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WcD-q2-rog"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>

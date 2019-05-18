@@ -1,0 +1,18 @@
+PODS:
+  - Alamofire (4.7.0)
+  - Google-Mobile-Ads-SDK (7.29.0)
+  - SwiftyJSON (4.0.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Google-Mobile-Ads-SDK
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 907e0a98eb68cdb7f9d1f541a563d6ac5dc77b25
+  Google-Mobile-Ads-SDK: 375bbb821b3df2106c37b74f6b0a97576ddc5f6b
+  SwiftyJSON: 070dabdcb1beb81b247c65ffa3a79dbbfb3b48aa
+
+PODFILE CHECKSUM: 0e394ae11111ebe890f193ba041292136483057f
+
+COCOAPODS: 1.4.0

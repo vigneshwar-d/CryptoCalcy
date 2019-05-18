@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B919822A20D4EA1300DDDA17 /* GoogleMobileAds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B919822920D4EA1300DDDA17 /* GoogleMobileAds.framework */; };
+		B9AF6059210EB957009065F4 /* InAppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9AF6058210EB957009065F4 /* InAppPurchase.swift */; };
 		B9C170C120CD00CD008A3828 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C020CD00CD008A3828 /* AppDelegate.swift */; };
 		B9C170C320CD00CD008A3828 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C170C220CD00CD008A3828 /* ViewController.swift */; };
 		B9C170C620CD00CD008A3828 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C170C420CD00CD008A3828 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 		A4E3D2E0668B94E0032F32A2 /* Pods-CrytoCalcy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CrytoCalcy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CrytoCalcy/Pods-CrytoCalcy.debug.xcconfig"; sourceTree = "<group>"; };
 		A899B42F0C97C8439B3392F4 /* Pods-CryptoCalcy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoCalcy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoCalcy/Pods-CryptoCalcy.debug.xcconfig"; sourceTree = "<group>"; };
 		B919822920D4EA1300DDDA17 /* GoogleMobileAds.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMobileAds.framework; path = "../../Downloads/GoogleMobileAdsSdkiOS-7.31.0/GoogleMobileAds.framework"; sourceTree = "<group>"; };
+		B9AF6058210EB957009065F4 /* InAppPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppPurchase.swift; sourceTree = "<group>"; };
 		B9C170BD20CD00CD008A3828 /* CryptoCalcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoCalcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C170C020CD00CD008A3828 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B9C170C220CD00CD008A3828 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,7 @@
 				B9C170C220CD00CD008A3828 /* ViewController.swift */,
 				B9C170DD20CD1702008A3828 /* CoinListViewController.swift */,
 				B9D6071A20D390C600DAD55B /* CurrencyListController.swift */,
+				B9AF6058210EB957009065F4 /* InAppPurchase.swift */,
 				B9C170C720CD00CD008A3828 /* CrytoCalcy.xcdatamodeld */,
 				B9C170C420CD00CD008A3828 /* Main.storyboard */,
 				B9C170CA20CD00CF008A3828 /* Assets.xcassets */,
@@ -154,6 +157,11 @@
 				TargetAttributes = {
 					B9C170BC20CD00CD008A3828 = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -252,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B9C170C320CD00CD008A3828 /* ViewController.swift in Sources */,
+				B9AF6059210EB957009065F4 /* InAppPurchase.swift in Sources */,
 				B9C170C120CD00CD008A3828 /* AppDelegate.swift in Sources */,
 				B9C170DE20CD1702008A3828 /* CoinListViewController.swift in Sources */,
 				B9C170DB20CD15E2008A3828 /* CoinCell.swift in Sources */,
@@ -402,6 +411,7 @@
 			baseConfigurationReference = A899B42F0C97C8439B3392F4 /* Pods-CryptoCalcy.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
@@ -412,6 +422,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CryptoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -422,6 +433,7 @@
 			baseConfigurationReference = 72AB637F4A496CB5C5CD7789 /* Pods-CryptoCalcy.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = AC848382SM;
 				INFOPLIST_FILE = CrytoCalcy/Info.plist;
@@ -432,6 +444,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vigneshwar-devendran.CryptoCalcy";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

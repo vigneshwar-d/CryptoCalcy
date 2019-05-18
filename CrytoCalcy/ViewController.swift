@@ -884,6 +884,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         performSegue(withIdentifier: "selectCurrency", sender: self)
     }
     
+    @IBAction func disableAdsPressed(_ sender: UIButton) {
+        print("Remove Ads pressed")
+    }
     
 
 }
